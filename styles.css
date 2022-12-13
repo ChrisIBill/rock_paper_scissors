@@ -1,0 +1,76 @@
+body {
+    background-color: antiquewhite;
+}
+.radio-container {
+    /* border: 2px solid darkblue; */
+    background-color: bisque;
+    display: flex;
+    position: relative;
+    margin-top: 10%;
+    height: 100%;
+    width: 35%;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    justify-content: center;
+    align-items: center;
+}
+/* Hides browsers default radio buttons */
+.radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ffddaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.radio-container:hover input ~ .checkmark {
+    background-color: #ddbb88;
+}
+/* input[type="radio"]:checked + label {
+    color: black;
+} */
+.radio-container input:checked ~ .checkmark {
+    background-color: #2196f3;
+}
+/* Create the indicator (the dot/circle - hidden when not checked) */
+/* .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+} */
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .checkmark:after {
+    background-color: black;
+}
+.footer {
+    border: 2px solid black;
+    background-color: #602020;
+    height: 30%;
+    width: 100%;
+    position: fixed;
+    bottom: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3%;
+}
+.radioButtons {
+    border: 2px solid darkblue;
+    background-color: aqua;
+}
+.button-label {
+    color: black;
+}
