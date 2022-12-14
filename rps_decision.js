@@ -1,4 +1,4 @@
-const rpsChoices = ["Rock", "Paper", "Scissors", null];
-const rpsDecision {
-    rps
-}
+// const rpsChoices = ["Rock", "Paper", "Scissors", null];
+// const rpsDecision {
+//     rps
+// }

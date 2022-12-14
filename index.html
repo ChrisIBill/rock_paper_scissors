@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./styles.css" />
+        <script src="javascript.js"></script>
+        <script src="main.js"></script>
         <title>Rock Paper Scissors</title>
     </head>
     <form></form>
@@ -25,40 +27,52 @@
         </div>
         <div class="footer">
             <div class="radio-container">
-                <input
+                <!-- <inputmyscripts
                     type="radio"
                     id="rock"
                     name="userDecision"
                     value="ROCK"
                     autocomplete="off"
-                />
-                <span class="checkmark">
+                /> -->
+                <span
+                    class="checkmark"
+                    onclick="clickHandler"
+                    onhover="hoverHandler"
+                >
                     <label class="button-label" id="rock" for="rock"
                         >Rock</label
                     >
                 </span>
             </div>
             <div class="radio-container">
-                <input
+                <!-- <input
                     type="radio"
                     id="paper"
                     name="userDecision"
                     value="PAPER"
                     autocomplete="off"
-                />
-                <span class="checkmark">
+                /> -->
+                <span
+                    class="checkmark"
+                    onclick="clickHandler"
+                    onhover="hoverHandler"
+                >
                     <label>Paper</label>
                 </span>
             </div>
             <div class="radio-container">
-                <input
+                <!-- <input
                     type="radio"
                     id="scissors"
                     name="userDecision"
                     value="SCISSORS"
                     class="radio-input"
-                />
-                <span class="checkmark">
+                /> -->
+                <span
+                    class="checkmark"
+                    onclick="clickHandler"
+                    onhover="hoverHandler"
+                >
                     <label class="button-label" id="scissors" for="scissors"
                         >Scissors</label
                     >
@@ -68,6 +82,5 @@
         <script>
             console.log("Hello World!");
         </script>
-        <script src="javascript.js"></script>
     </body>
 </html>

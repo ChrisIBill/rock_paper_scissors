@@ -26,37 +26,49 @@ While (!Game-Over) (also maybe HALT if player presses space-bar?)
                     play again?
                         if no, flips you off
                 */
-
+let fresh = true;
 let setOver = false;
 let setWins = 0, setLosses = 0;
 let gameWins = 0, gameLosses = 0;
+let numRounds = 0;
 let playerWin = null;
 
-
+// while (fresh) {
+//     //ask if player wants to play a game of rps
+// }
+console.log("Here");
 while (!setOver) {
-    let playerSelection = new rpsDecision;
-    player
+    console.log("Here");
+    let playerSelection = false;
     let botSelection = false;
     for (timer = 0; timer <= 3; timer++) {
         //Show a countdown
         setInterval(function () { console.log("Executed after 1 second"); }, 1000);
-        decisionTimer++;
     }
     botSelection = botDecision();
     playerSelection = false;
     //get player selection
     if (!playerSelection) {
-        gameLosses--;
-        console.Log
+        gameLosses++;
+        console.log("No player selection");
         //Animate a fuck you
     }
     else {
         let didWin = checkWin(playerSelection, botSelection);
-        if () {
-
+        if (didWin) {
+            gameWins++;
+            console.log("Player win");
+        }
+        else {
+            gameLosses++;
+            console.log("Player win");
         }
 
         //Restart Screen
+    }
+    let score = gameWins - gameLosses;
+    if (numRounds >= 3 || score >= 2 || score <= 2) {
+        setOver = true;
     }
 }
 
@@ -75,6 +87,7 @@ function botDecision() {
             break;
         default:
             console.log("Error in botDecision function");
+            return -1;
     }
     return botDecision;
 }
@@ -84,6 +97,7 @@ function checkWin(pSelect, bSelect) {
     if (!pSelect.match(re) || !bSelect.match(re)) {
         console.log("Bad values passed to checkWin")
         console.log(pSelect + bSelect);
+        return -1;
     }
     let isWon = null;
     if (_.isEqual(pSelect, bSelect)) {
