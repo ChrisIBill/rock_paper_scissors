@@ -9,6 +9,20 @@
     </head>
     <form></form>
     <body>
+        <div class="header">
+            <div class="set-header">
+                <div class="set-wins"></div>
+                <div class="set-losses"></div>
+                <div class="game-header">
+                    <div class="game-wins"></div>
+                    <div class="round-number"></div>
+                    <div class="game-losses"></div>
+                </div>
+            </div>
+        </div>
+        <div class="game-container">
+            <div class="svg-displayer"></div>
+        </div>
         <div class="footer">
             <div class="radio-container">
                 <input
@@ -42,7 +56,7 @@
                     id="scissors"
                     name="userDecision"
                     value="SCISSORS"
-                    autocomplete="off"
+                    class="radio-input"
                 />
                 <span class="checkmark">
                     <label class="button-label" id="scissors" for="scissors"
